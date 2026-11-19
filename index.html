@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Kecepatan Mengetik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <span class="eyebrow">⚡ MINI GAME</span>
+            <h1>Typing <span>Rush!</span></h1>
+            <p>Seberapa cepat jarimu bisa menaklukkan tantangan?</p>
+        </header>
+
+        <section class="game-card" aria-label="Permainan mengetik">
+            <div class="game-topline">
+                <span class="challenge-label">TANTANGAN <strong id="challenge-number">1</strong></span>
+                <span class="time-pill">⏱ <span id="time">60</span> detik</span>
+            </div>
+
+            <div class="progress-track" aria-hidden="true">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p id="text-to-type" class="challenge-text" aria-live="polite"></p>
+            <textarea class="input-area" id="inputArea" placeholder="Tekan Mulai, lalu ketik kalimat di atas..." 
+            aria-label="Ketik kalimat tantangan" disabled></textarea>
+
+            <button id="Start-button" type="button">Mulai Tantangan <span>→</span></button>
+
+            <div class="stats-grid">
+                <div class="stat-box"><span>SKOR</span><strong id="score">0</strong></div>
+                <div class="stat-box"><span>KECEPATAN</span><strong><span id="word-per-minute">0</span><small> 
+                WPM</small></strong></div>
+                <div class="stat-box"><span>AKURASI</span><strong><span id="accuracy">100</span><small>%</small></strong></div>
+                <div class="stat-box"><span>COMBO</span><strong>🔥 <span id="combo">0</span></strong></div>
+            </div>
+            <p id="rating" class="game-message" aria-live="polite">Siap? Tekan tombol untuk mulai!</p>
+        </section>
+
+        <p class="tip">Tips: ketik dengan tepat untuk menjaga combo dan meraih skor tertinggi ✨</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
